@@ -40,8 +40,8 @@ public class DataGridWritter {
 	String homeMethod() {
 
 		return "<br><h1><strong>DataGrid Client</strong></h1></br>"
-				+ "<br>Poner prendas en la caché: <a href= 'datagrid-client.accenture.cloud/put?parametro1=1&amp;parametro2=1'>datagrid-client.accenture.cloud/put?parametro1=1&amp;parametro2=1</a></h1></br>"
-				+ "<br>Sacar prendas de la caché: <a href= 'datagrid-client.accenture.cloud/get?parametro1=1'>datagrid-client.accenture.cloud/get?parametro1=1</a></h1></br>";
+				+ "<br>Poner prendas en la caché: <a href= '/put?parametro1=1&amp;parametro2=1'>datagrid-client.accenture.cloud/put?parametro1=1&amp;parametro2=1</a></h1></br>"
+				+ "<br>Sacar prendas de la caché: <a href= '/get?parametro1=1'>datagrid-client.accenture.cloud/get?parametro1=1</a></h1></br>";
 	}
 
 	/**
