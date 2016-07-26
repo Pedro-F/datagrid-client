@@ -1,9 +1,7 @@
 package dataGridSrv1;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +35,7 @@ public class DataGridWritter {
 	// Variables globales
 	private RemoteCacheManager cacheManager;
 	private RemoteCache<String, Object> cache = null;
-	private final static DatagridListener listener = new DatagridListener();
-
+	
 	@RequestMapping("/")
 	String homeMethod() {
 
@@ -173,7 +170,6 @@ public class DataGridWritter {
 		long timeGetCacheData = 0;
 		long timePutCacheData = 0;
 		long timeGetCacheListas = 0;
-		long contadorPuts = 0;
 		boolean bSoloGet = false;
 		
 		try {
@@ -251,10 +247,6 @@ public class DataGridWritter {
 						"###===>>> Conectando a host : " + jdgProperty(JDG_HOST) + ", puerto: " + jdgProperty(HOTROD_PORT));
 				cacheManager = new RemoteCacheManager(builder.build());
 				cache = cacheManager.getCache("prendas");
-				
-				//Añadimos el listener
-				
-				cache.addClientListener(listener);
 				
 				// Inicializo la caché con el mapa de prendas
 				if (!cache.containsKey(PRENDAS_KEY)) {
