@@ -39,9 +39,9 @@ public class DataGridWritter {
 	@RequestMapping("/")
 	String homeMethod() {
 
-		return "<br><h1><strong>dataGridSrv1</strong></h1></br>"
-				+ "<br>Poner prendas en la caché: datagrid-srv1.accenture.cloud/put?parametro1=&parametro2=</h1></br>"
-				+ "<br>Sacar prendas de la caché: datagrid-srv1.accenture.cloud/get?parametro1=</h1></br>";
+		return "<br><h1><strong>DataGrid Client</strong></h1></br>"
+				+ "<br>Poner prendas en la caché: <a href= 'datagrid-client.accenture.cloud/put?parametro1=1&amp;parametro2=1'>datagrid-client.accenture.cloud/put?parametro1=1&amp;parametro2=1</a></h1></br>"
+				+ "<br>Sacar prendas de la caché: <a href= 'datagrid-client.accenture.cloud/get?parametro1=1'>datagrid-client.accenture.cloud/get?parametro1=1</a></h1></br>";
 	}
 
 	/**
